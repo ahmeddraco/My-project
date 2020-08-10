@@ -1,1 +1,39 @@
 Git i GitHub
+
+Git je alat odnosno sistem putem kojeg se izvršavaju funkcije i komande čime programeri stvaraju nešto i gdje dorađuju i modifikuju svoje projekte i aplikacije. 
+GitHub je platforma odnosno centar gdje programeri pohranjuju svoje projekte i dijele ih sa ostalim kolegama.
+
+Git komande
+
+Pravljenje git repozitorijuma se može izvesti na dva načina: putem komande git init ukoliko pravimo postojeći projekat koristeći Git te putem komande git clone ukoliko
+preuzimamo postojeću kopiju repozitorijuma.
+
+Svaki fajl u Gitu može biti praćen i nepraćen tj tracked i untracked. Praćeni su oni koji su zadnji memorisani i oni se mogu modifikovati i stejdžovati a nepraćeni su
+svi oni koji nisu zadnji memorisani i nisu na stejdžu.
+
+Komandom git status provjeravamo na kojem statusu tj u kojem stanju su određeni fajlovi (da li su modifikovani, da li su praćeni itd.) 
+
+Dodavanje fajla ide komandom git add nakon koje možemo izvršti prethodno navedenu komandu git status kako bi vidjeli da je fajl dodan i stejdžovan za commit. Komandu 
+git add . koristimo ukoliko želimo dodati sve fajlove.
+
+Kada želimo da Git automatski ne dodaje određene fajlove koristimo komandu .gitignore. Također možemo zadati naređenje da ignorišemo fajlove koji završavaju na npr: 
+.o , .a , .txt , .js , (abc) , itd..
+
+Komanda git diff je veoma slična git statusu ali razlika je u tome što git status pokazuje uopšteno imena fajlova koja su bila sklona zadnjim promjenama dok git diff 
+pokazuje ne samo fajlove koje smo mijenjali nego i šta smo sve mijenjali, šta smo mijenjali a nismo stejdžovali, pokazuje sve detaljno.
+
+Kada je sve spremno odnosno kada smo fajlove bacili na stejdž slijedi komitovanje uz komandu git commit. Međutim koristeći samo git commit otvoriće se Editor koji nije
+baš privlačan (barem meni) te kako bi se izbjegao koristi se git commit -m "opis promjene" .
+
+Uklanjanje fajlova ide naredbom git rm i ja sam često korstio kao git rm --cached file.
+
+Kada želimo da pregledamo historiju komitova te da pregledamo unazad šta se radilo koristimo git log.
+
+Što se tiče grana tj branch, kada želimo da vidimo koja grana nam je trenutno aktivna koristimo git branch i to će uglavnom biti master branch.
+Novu granu stvaramo sa git branch "naziv grane" a ukoliko želimo da se prebacimo sa jedne grane na drugu koristimo komandu git checkout "naziv grane".
+
+Komandu merge ću najlakše objasniti kroz primjer tj koristi se ako imamo dvije grane tipa "master" grana i "nova grana". Ako izvršimo određene promjene na fajlovima unutar 
+"nove grane" a želimo da to bude prikazano i na "master" grani onda koristimo git merge "nova grana".
+
+Kada želimo ovo sve prebaciti na GitHub koristimo naredbe git push te ukolikp želimo prebaciti sve sa master grane koristimo git push origin master. Naredba koja se također 
+koristi pri GitHubu je git remote a ona je vezana za sve naredbe sa administracijom githuba. Sa komandom git pull povlačimo izmjene sa repozitorijuma.
